@@ -1,17 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Vega :mode="mode" />
+
+    <input type="radio" id="low" value="low" v-model="mode">
+    <label for="selection">Low</label>
+    <br>
+    <input type="radio" id="high" value="high" v-model="mode">
+    <label for="time">High</label>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Vega from './components/Vega.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Vega
+  },
+  data () {
+    return {
+      mode: 'low'
+    }
   }
 }
 </script>
