@@ -1,5 +1,5 @@
 <template>
-  <div ref="vega"></div>
+  <div ref="vega" :mode="mode"></div>
 </template>
 
 <script>
@@ -12,6 +12,16 @@
         .initialize(this.$refs.vega)
         .renderer('svg')
         .run();
-    }
+    },
+
+    props: {
+      mode: String
+    },
+
+    watch: {
+      mode (m) {
+        console.log(m);
+      }
+    },
   };
 </script>
