@@ -1,5 +1,5 @@
 <template>
-  <div ref="vega" :mode="mode"></div>
+  <div ref="vega"></div>
 </template>
 
 <script>
